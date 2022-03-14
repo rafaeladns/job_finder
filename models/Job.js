@@ -1,12 +1,9 @@
 const Sequelize = require('sequelize');
-const db = ('../db/connection');
+const db = require('../db/connection');
 
-//Criando model com método define do sequelize//
+//Criar model com método chamado define do sequelize//
 const Job = db.define('job', {
   title: {
-    type: Sequelize.STRING,
-  },
-  description: {
     type: Sequelize.STRING,
   },
   salary: {
@@ -14,14 +11,16 @@ const Job = db.define('job', {
   },
   company: {
     type: Sequelize.STRING,
-  }, 
-  email: {
+  },
+  email:{
     type: Sequelize.STRING,
   },
-  new_Job: {
+  new_job:{
     type: Sequelize.INTEGER,
+  },
+  description: {
+    type: Sequelize.STRING,
   }
 });
 
-//exportar//
 module.exports = Job
