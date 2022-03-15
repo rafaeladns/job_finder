@@ -20,6 +20,12 @@ const Job = db.define('job', {
   },
   description: {
     type: Sequelize.STRING,
+  },
+  createdAt:{
+    type: Sequelize.STRING,
+  },
+  updateAt: {
+    type: Sequelize.STRING,
   }
 });
 
